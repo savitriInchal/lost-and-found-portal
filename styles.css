@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Page background */
+body {
+    background: #f4f6f8;
+}
+
+/* Header - centered text */
+header {
+    background: #1e88e5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main container - centered horizontally */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    margin: 20px auto;   /* THIS keeps center alignment */
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Section headings */
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+    text-align: left;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Button - centered by width 100% */
+button {
+    margin-top: 15px;
+    background: #1e88e5;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Button hover */
+button:hover {
+    background: #1565c0;
+}
+
+/* Item cards */
+.item {
+    background: #f1f1f1;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 5px solid #1e88e5;
+}
+
+/* Bold labels inside item */
+.item span {
+    font-weight: bold;
+}
+
+/* Footer - centered text */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    margin-top: 20px;
+}
