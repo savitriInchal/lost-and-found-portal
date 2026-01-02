@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lost & Found Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>🔍 Lost & Found Portal</h1>
+    <p>Report and Find Lost Items Easily</p>
+</header>
+
+<div class="container">
+    <h2>Report Lost / Found Item</h2>
+
+    <form id="itemForm">
+        <label>Item Name</label>
+        <input type="text" id="itemName" required>
+
+        <label>Category</label>
+        <select id="category">
+            <option>Electronics</option>
+            <option>Documents</option>
+            <option>Wallet</option>
+            <option>Accessories</option>
+            <option>Others</option>
+        </select>
+
+        <label>Type</label>
+        <select id="type">
+            <option>Lost</option>
+            <option>Found</option>
+        </select>
+
+        <label>Description</label>
+        <textarea id="description"></textarea>
+
+        <label>Contact Number</label>
+        <input type="text" id="contact" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Reported Items</h2>
+    <div id="itemsList"></div>
+</div>
+
+<footer>
+    <p>© 2026 Lost & Found Portal</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
