@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<script>
+if (!localStorage.getItem("isLoggedIn")) {
+    alert("Please login first");
+    window.location.href = "login.html";
+}
+</script>
 
 <header>
     <h1>🔍 Lost & Found Portal</h1>
@@ -54,3 +60,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
