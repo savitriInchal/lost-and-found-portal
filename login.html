@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form id="loginForm">
+    <input type="text" id="loginUser" placeholder="Username" required><br><br>
+    <input type="password" id="loginPass" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+</form>
+
+<p>New user? <a href="register.html">Register</a></p>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const user = document.getElementById("loginUser").value;
+    const pass = document.getElementById("loginPass").value;
+
+    const storedUser = localStorage.getItem("username");
+    const storedPass = localStorage.getItem("password");
+
+    if(user === storedUser && pass === storedPass){
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "lost_found.html";
+    } else {
+        alert("Invalid username or password");
+    }
+});
+</script>
+
+</body>
+</html>
