@@ -106,4 +106,21 @@ footer {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
+.reg-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-box {
+    background: #ffffff;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
 
