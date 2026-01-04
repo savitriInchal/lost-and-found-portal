@@ -88,19 +88,11 @@ footer {
     color: white;
     margin-top: 20px;
 }
-/* ===== Login Page Only ===== */
-.login-page {
-    min-height: 100vh;
+/* ===== Login Page Center Fix ===== */
+
+.login-container {
+    min-height: calc(100vh - 120px); /* header + footer space */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.login-box {
-    background: #ffffff;
-    padding: 30px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
 }
