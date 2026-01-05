@@ -121,6 +121,55 @@ footer {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
+/* ===== Dashboard Styles ===== */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #667eea, #764ba2);
+}
+
+.dashboard-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.dashboard-title {
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 22px;
+}
+
+.dashboard-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #667eea;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dashboard-btn:hover {
+    background-color: #5a67d8;
+}
+
+.logout-btn {
+    background-color: #e53e3e;
+}
+
+.logout-btn:hover {
+    background-color: #c53030;
+}
+
 
 
 
