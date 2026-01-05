@@ -169,6 +169,50 @@ footer {
 .logout-btn:hover {
     background-color: #c53030;
 }
+/* ===== My Reports Page ===== */
+.reports-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.reports-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.reports-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.report-card {
+    text-align: left;
+    padding: 15px 20px;
+    background: #f7f7f7;
+    border-left: 5px solid #667eea;
+    border-radius: 8px;
+}
+
+.report-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.report-card p {
+    margin: 3px 0;
+    font-size: 14px;
+    color: #555;
+}
+
 
 
 
