@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Lost & Found Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- single CSS file -->
+</head>
+<body>
+
+<div class="dashboard-container">
+    <div class="dashboard-card">
+        <h2 class="dashboard-title">Welcome to Dashboard</h2>
+
+        <button class="dashboard-btn" onclick="goToLostFound()">➕ Report Lost / Found Item</button>
+        <button class="dashboard-btn" onclick="viewItems()">📄 View All Items</button>
+        <button class="dashboard-btn" onclick="myReports()">📂 My Reports</button>
+        <button class="dashboard-btn logout-btn" onclick="logout()">🚪 Logout</button>
+    </div>
+</div>
+
+<script>
+    // Login protection
+    if (!localStorage.getItem("isLoggedIn")) {
+        alert("Please login first");
+        window.location.href = "login.html";
+    }
+
+    function goToLostFound() {
+        window.location.href = "lost_found.html";
+    }
+
+    function viewItems() {
+        window.location.href = "view_items.html";
+    }
+
+    function myReports() {
+        window.location.href = "my_reports.html";
+    }
+
+    function logout() {
+        localStorage.removeItem("isLoggedIn");
+        alert("Logged out successfully");
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>
