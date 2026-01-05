@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Reports | Lost & Found Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="reports-container">
+    <h2 class="reports-title">My Reports</h2>
+    <div id="reports-list" class="reports-list">
+        <!-- Report items will be displayed here -->
+    </div>
+
+    <button class="dashboard-btn" onclick="goToDashboard()">⬅ Back to Dashboard</button>
+</div>
+
+<script>
+    // Login protection
+    if (!localStorage.getItem("isLoggedIn")) {
+        alert("Please login first");
+        window.location.href = "login.html";
+    }
+
+    // Simulated logged-in user
+    const currentUser = localStorage.getItem("currentUser");
+
+    // Get all lost/found items from localStorage
+    const allItems = JSON.parse(localStorage.getItem("lostFoundItems")) || [];
+
+    // Filter items submitted by this user
+    const myItems = allItems.filter(item => item.user === currentUser);
+
+    const reportsList = document.getElementById("reports-list");
+
+    if(myItems.length === 0) {
+        reportsList.innerHTML = "<p>No reports submitted yet.</p>";
+    } else {
+        myItems.forEach((item, index) => {
+            const reportCard = document.createElement("div");
+            reportCard.classList.add("report-card");
+            reportCard.innerHTML = `
+                <h3>${item.type}: ${item.itemName}</h3>
+                <p><strong>Category:</strong> ${item.category}</p>
+                <p><strong>Date:</strong> ${item.date}</p>
+                <p><strong>Location:</strong> ${item.location}</p>
+                <p><strong>Status:</strong> ${item.status || 'Pending'}</p>
+            `;
+            reportsList.appendChild(reportCard);
+        });
+    }
+
+    function goToDashboard() {
+        window.location.href = "dashboard.html";
+    }
+</script>
+
+</body>
+</html>
