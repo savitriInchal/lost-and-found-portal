@@ -30,7 +30,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
 
     if(user === storedUser && pass === storedPass){
         localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "lost_found.html";
+        window.location.href = "dashboard.html";
     } else {
         alert("Invalid username or password");
     }
@@ -41,6 +41,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
 </body>
 
 </html>
+
 
 
 
