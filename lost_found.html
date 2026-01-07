@@ -56,32 +56,10 @@ if (localStorage.getItem("isLoggedIn")!=="true") {
 <footer>
     <p>© 2026 Lost & Found Portal</p>
 </footer>
-    <script>
-document.getElementById("lostFoundForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    let item = {
-        itemName: document.getElementById("itemName").value,
-        category: document.getElementById("category").value,
-        type: document.getElementById("type").value,
-        description: document.getElementById("description").value,
-        contact: document.getElementById("contact").value
-    };
-
-    let items = JSON.parse(localStorage.getItem("lostFoundItems")) || [];
-    items.push(item);
-    localStorage.setItem("lostFoundItems", JSON.stringify(items));
-
-    alert("Item reported successfully!");
-    this.reset();
-
-    window.location.href = "my_reports.html";
-});
-</script>
-
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
