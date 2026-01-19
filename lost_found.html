@@ -52,6 +52,31 @@ if (localStorage.getItem("isLoggedIn")!=="true") {
     <h2>Reported Items</h2>
     <div id="itemsList"></div>
 </div>
+    <script>
+const form = document.getElementById("itemForm");
+const itemsList = document.getElementById("itemsList");
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const item = {
+        user: localStorage.getItem("currentUser"), // 👈 logged user
+        name: document.getElementById("itemName").value,
+        category: document.getElementById("category").value,
+        type: document.getElementById("type").value,
+        description: document.getElementById("description").value,
+        contact: document.getElementById("contact").value
+    };
+
+    let reports = JSON.parse(localStorage.getItem("reports")) || [];
+    reports.push(item);
+    localStorage.setItem("reports", JSON.stringify(reports));
+
+    alert("Item reported successfully!");
+    form.reset();
+});
+</script>
+    
 
 <footer>
     <p>© 2026 Lost & Found Portal</p>
@@ -59,6 +84,7 @@ if (localStorage.getItem("isLoggedIn")!=="true") {
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
