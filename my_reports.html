@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Reports</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+<h2>My Reported Items</h2>
+
+<div id="myReports"></div>
+
+<script>
+const currentUser = localStorage.getItem("currentUser");
+const reports = JSON.parse(localStorage.getItem("reports")) || [];
+const myReportsDiv = document.getElementById("myReports");
+
+const myReports = reports.filter(item => item.user === currentUser);
+
+if(myReports.length === 0){
+    myReportsDiv.innerHTML = "<p>No reports submitted yet.</p>";
+}
+
+myReports.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerHTML = `
+        <p><b>Item:</b> ${item.name}</p>
+        <p><b>Category:</b> ${item.category}</p>
+        <p><b>Status:</b> ${item.type}</p>
+        <p><b>Description:</b> ${item.description}</p>
+        <p><b>Contact:</b> ${item.contact}</p>
+        <hr>
+    `;
+    myReportsDiv.appendChild(div);
+});
+</script>
+
+</body>
+</html>
