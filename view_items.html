@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Items</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>All Lost and Found Items</h2>
+
+<div id="allItems"></div>
+
+<script>
+const allItemsDiv = document.getElementById("allItems");
+const reports = JSON.parse(localStorage.getItem("reports")) || [];
+
+if(reports.length === 0){
+    allItemsDiv.innerHTML = "<p>No items reported yet.</p>";
+}
+
+reports.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.innerHTML = `
+        <p><b>Item Name:</b> ${item.name}</p>
+        <p><b>Category:</b> ${item.category}</p>
+        <p><b>Status:</b> ${item.type}</p>
+        <p><b>Description:</b> ${item.description}</p>
+        <p><b>Contact:</b> ${item.contact}</p>
+        <hr>
+    `;
+    allItemsDiv.appendChild(div);
+});
+</script>
+
+</body>
+</html>
